@@ -1,0 +1,24 @@
+name: Build app
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: checkout repository code
+        uses: actions/checkout@v3
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install yawn
+        run: npm install yawn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Execute build
+        run: yarn build
