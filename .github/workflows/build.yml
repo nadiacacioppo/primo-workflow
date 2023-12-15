@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Install yawn
-        run: npm install yawn
+      - name: Install yarn
+        run: npm install yarn
 
       - name: Install dependencies
         run: yarn install
