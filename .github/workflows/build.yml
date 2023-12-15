@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
+    
     steps:
       - name: checkout repository code
         uses: actions/checkout@v3
@@ -27,3 +27,10 @@ jobs:
 
       - name: Execute build
         run: yarn build
+
+  build-test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Execute test
+        run: yarn next lint
