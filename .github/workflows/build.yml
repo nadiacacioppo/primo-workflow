@@ -33,4 +33,4 @@ jobs:
 
     steps:
       - name: Execute test
-        run: yarn next lint
+        run: yarn lint
